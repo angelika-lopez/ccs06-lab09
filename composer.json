@@ -1,0 +1,17 @@
+{
+    "name": "angelika-lopez/ccs06-lab09",
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Angelika Mae Lopez",
+            "email": "lopez.angelikamae@auf.edu.ph"
+        }
+    ]
+}
