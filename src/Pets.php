@@ -96,6 +96,44 @@ class Pets
 		return null;
 	}
 
+	public static function setGenderFemale()
+	{
+		global $conn;
+
+		try {
+			$sql = "
+				INSERT INTO pets (gender)
+				VALUES ('Female')
+			";
+			$conn->exec($sql);
+
+			return $conn->lastInsertId();
+		} catch (PDOException $e) {
+			error_log($e->getMessage());
+		}
+
+		return false;
+	}
+
+	public static function setGenderMale()
+	{
+		global $conn;
+
+		try {
+			$sql = "
+				INSERT INTO pets (gender)
+				VALUES ('Male')
+			";
+			$conn->exec($sql);
+
+			return $conn->lastInsertId();
+		} catch (PDOException $e) {
+			error_log($e->getMessage());
+		}
+
+		return false;
+	}
+
 	public static function register($name, $gender, $birthdate, $owner, $email, $address, $contact_number)
 	{
 		global $conn;

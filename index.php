@@ -26,9 +26,10 @@ $pets = Pets::list();
 <td>
 	<a href="delete-pets.php?id=<?php echo $pets->getId(); ?>">DELETE</a>
 </td>
-<td>
-	<a href="truncate-table.php"> TRUNCTATE </a>
-</td>
 </tr>
 <?php endforeach ?>
 </table>
+<br>
+<a href="load-data.php">LOAD DUMMY DATA</a>
+<br>
+<a href="truncate-table.php">TRUNCATE</a>

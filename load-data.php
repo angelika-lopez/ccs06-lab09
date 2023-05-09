@@ -5,7 +5,7 @@ require "config.php";
 use App\Pets;
 
 try {
-	Pets::register('Cookie', 'Female', 'May 08, 2020', 'Angel', 'angelika@gmail.com', 'Angeles City', '09123456789');
+	Pets::register('Cookie', 'Female', 'May 08, 2020', 'Angel', 'angel-cookie@gmail.com', 'Angeles City', '09123456789');
 	echo "<li>Added 1 student";
 
 	$pets = [
@@ -13,18 +13,18 @@ try {
 			'name' => 'Browny',
 			'gender' => 'Male',
 			'birthdate' => 'February 11, 2019',
-			'owner' => 'Jan',
-			'email' => 'jan@gmail.com',
-			'address' => 'Mabalacat City',
+			'owner' => 'Angel',
+			'email' => 'angel-browny@gmail.com',
+			'address' => 'Angeles City',
 			'contact_number' => '09123456789'
 		],
 		[
 			'name' => 'Chewy',
 			'gender' => 'Male',
 			'birthdate' => 'December 20, 2021',
-			'owner' => 'Hendrick',
-			'email' => 'hendrick@gmail.com',
-			'address' => 'Pandacaqui',
+			'owner' => 'Angel',
+			'email' => 'angel-chewy@gmail.com',
+			'address' => 'Angeles City',
 			'contact_number' => '09123456789'
 		]
 	];

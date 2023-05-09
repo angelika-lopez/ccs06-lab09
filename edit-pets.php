@@ -6,7 +6,9 @@ use App\Pets;
 
 $pets_id = $_GET['id'];
 
-$student = Pets::getById($pets_id);
+$pets = Pets::getById($pets_id);
+
+$gender_text = $pets->getGender();
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,7 +19,6 @@ $student = Pets::getById($pets_id);
 </head>
 <body>
 <h1>Edit Pets</h1>
-
 <form action="save-changes.php" method="POST">
 	<input type="hidden" name="id" value="<?php echo $pets->getId(); ?>">
 	<div>
@@ -26,7 +27,19 @@ $student = Pets::getById($pets_id);
 	</div>
 	<div>
 		<label>Gender</label>
-		<input type="radio" name="Gender" placeholder="Gender" value="<?php echo $pets->getGender();?>" />	
+		<?php if ($gender_text == "Male")
+		{
+			echo '<input type="radio" name="gender" checked value="Male" /> <lalbel> Male </label>';
+			echo '<input type="radio" name="gender" value="Female" /> <lalbel> Female </label>';
+		}; ?>
+
+		<?php if ($gender_text == "Female")
+		{
+			echo '<input type="radio" name="gender" value="Male" /> <lalbel> Male </label>';
+			echo '<input type="radio" name="gender" checked value="Female" /> <lalbel> Female </label>';
+		}; ?>
+		
+		
 	</div>
 	<div>
 		<label>Owner</label>
